@@ -1,0 +1,48 @@
+Neuron -> Long tale is called Axon, branches are called Dendrites
+Dendrites are reciever
+Axon are transmitters
+Axon doesn't touch with dendrites and space between them are called synapse
+
+Deeplearning
+Neuron = Nodes
+ 
+1- Activation Function:-
+
+1-Threshold:- x>=0 so 1 else 0
+2- Sigmoid:- 1/(1+e^-x)
+3- Rectifier:- max(x, 0)
+4- Hyperbolic Tangent Function:- (1 - e^-2x) / (1 + e^-2x)
+
+Q1- Assuming independent variable is binary (0 and 1) which activation function to choose?
+Ans:- 1- Threshold (bcz it gives either 0 or 1) 2- Sigmoid (bcz it gives value b/w 0 and 1 so we use P(y=1))
+
+Cost function:-
+C=((output-actual)^2)*1/2
+
+2- How Neural Network Learn?
+Ans- Let y is Actual value and y^ is Output value. 
+	First Compare Both of these by using cost function. Lower the cost better the NN is. Now the data is feed back
+	and weights are re adjusted until minimum cost function. Note all this currently happens for only one row.
+
+3- BackPropogation:-
+	Process of re adjusting weights is called back propogation.
+	It adjust weights simultaneously.
+
+4- Gradient Descent:-(They are determenistic i.e give same result every time)
+	Method of minimizing cost function. Applied on a batch.
+	If we try brute force we can fall in "Curse of dimensionality".
+	How it Works? Check the slope of cost function if slope is negative go down hill and vice versa until best fit.
+	Note:- It requries cost function to be convex. Other wise it can fail
+
+5- Stochastic Gradient Descent:- (Its faster than gradient descent)
+	Here we adjust weight row by row
+
+Conclusion:-
+Training of ANN:-
+1- Random init weights close to 0
+2- input first row each feature(column) in one node.
+3- Forward Progration (Left to Right)
+4- Compare Predicted with actual
+5- Backpropogation (right to left)
+6- Repeat 1 - 5 using Reinforcement or Batch Learning.
+7- Run more epochs.

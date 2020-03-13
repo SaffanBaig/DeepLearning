@@ -1,0 +1,33 @@
+Rectifier activation function:-
+	RELU (either 0 or 1)
+Output Nodes:-
+If data is lineraly seperable we dont need hidden layers.
+else:
+Calculate output_nodes = (InputLayers + OutputLayers)/2
+
+
+In classification if we have only one or two output Node we use activation=sigmoid as they give probability between 0 and 1.
+In case we have more than two output Node (Dependent Variable) we use activation=softmax which is same as sigmoid
+
+Optimizer:-
+Adjust weights (e.g stochastic gradient descent)
+One type of stochastic gradient descent algo is called (adam)
+
+loss:-
+for sigmoid in output of logisitic regression we use logarithmic loss function.
+In case of one output Node we call it (binary_crossentropy) and for more than one we call it (categorical_crossentropy)
+
+Bias Variance Tradeoff:-
+Getting Different accuracies every time we predict so we wan't less variance
+we can solve this using kfold. We want low bias(high accuracy) and low variance
+
+Overfitting:-
+Good results on training set but doesnot perform well on test set.
+Can be reduced by Dropout regularization
+
+Dropout regularization:-
+Deactivating some neurons so they don't over learn
+
+Parameter Tuning:-
+Learned parameters e.g(weights)
+Fixed parameters also known as Hyperparameter.(e.g:- Batch size, epochs etc)
